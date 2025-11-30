@@ -8,16 +8,6 @@ use Google\Service\Drive;
 use Google\Service\Drive\DriveFile;
 use Google\Service\Sheets as Google_Service_Sheets;
 use Google\Service\Sheets\ValueRange as Google_Service_Sheets_ValueRange;
-
-/* Api de Drive */
-putenv('GOOGLE_APPLICATION_CREDENTIALS=../cotizaciones-462816-6cbb8e40c62c.json');
-
-/* Api de Escritura Excel */
-putenv('GOOGLE_APPLICATION_CREDENTIALS=../cotizaciones-462816-324b5de0d7a7.json');
-
-/* Api de consulta */
-putenv('GOOGLE_APPLICATION_CREDENTIALS=../cotizaciones-462816-62556ba66872.json');
-
 class Registrar {
   
     /* Enviar Datos a la hoja de calculo */
@@ -287,43 +277,6 @@ class Registrar {
         } catch (Exception $e) {
             echo 'Error al subir el archivo a Google Drive: ' . $e->getMessage();
             return false; 
-        }
-    }
-
-    /* Consultar artículos */
-    public function consultarArticulos($busqueda)
-    {
-        $client = new Google_Client();
-        $client->setScopes(['https://www.googleapis.com/auth/spreadsheets.readonly']);
-        $client->setAuthConfig('../cotizaciones-462816-62556ba66872.json');
-        $service = new Google_Service_Sheets($client);
-        $spreadsheetId = '1nVZxnDBCa6hp-EHHyD--mtQ5PocOjraN2G5-ddH5cL0'; // ID de tu hoja de cálculo
-        $range = 'Códigos artículos!A2:A'; // Rango donde se encuentran los artículos
-        
-        try {
-            $response = $service->spreadsheets_values->get($spreadsheetId, $range);
-            $values = $response->getValues();
-
-            if (empty($values)) {
-                return []; 
-            } else {
-                // Filtrar los artículos según la búsqueda
-                $articulos = [];
-                foreach ($values as $i => $item) {
-                    if (!empty($busqueda)) {
-                        if (stripos($item[0], $busqueda) === false) {
-                            continue;
-                        }
-                    }
-                    // Puedes usar el índice como id si no tienes uno real
-                    $articulos[] = [$item[0], $i];
-                }
-                return $articulos;
-            }
-
-        } catch (Exception $e) {
-            echo 'Error al consultar los artículos: ' . $e->getMessage();
-            return []; 
         }
     }
 

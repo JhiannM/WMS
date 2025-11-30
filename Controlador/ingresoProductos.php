@@ -49,26 +49,6 @@ class ConsultarArticulos
             ]);
         }
     }
-
-    /* Obtener los jefes */
-    public function obtenerJefes()
-    {
-        // Llamar al método de la clase Registrar para obtener los jefes
-        $jefes = $this->registrar->consultarJefeAprueba();
-
-        if ($jefes) {
-            echo json_encode([
-                'success' => true,
-                'data' => $jefes
-            ]);
-        } else {
-            echo json_encode([
-                'success' => false,
-                'mensaje' => 'No se encontraron jefes'
-            ]);
-        }
-    }
-
 }
 
 /* Ejecutador de funciones */
