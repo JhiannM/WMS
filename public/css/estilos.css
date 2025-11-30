@@ -1,0 +1,222 @@
+body {
+  font-family: "Roboto", arial;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+#form {
+  max-width: 98%;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.caja-titulo {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.caja-subtitulo {
+  color: #145a32;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  border-radius: 8px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.cantidad {
+  width: 70px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.archivo {
+  width: 200px;
+}
+
+.aprueba,
+.fecha {
+  width: 150px;
+}
+
+td#colArticulo {
+  width: 450px;
+  text-align: center;
+}
+
+b#nota\* {
+  color: rgb(58, 26, 26);
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+  color: #0d0d0d;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s;
+  margin-top: 4px;
+}
+
+.btnAgregar {
+  padding: 1px 6px;
+  margin-top: 0px !important;
+}
+
+.btn-outline-success:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: #1fdb84;
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-outline-warning {
+  margin-left: 25%;
+}
+
+.btnArticulo {
+  margin-left: 10%;
+}
+
+.btn-sm {
+  height: 40px;     
+}
+
+#botones {
+  display: flex;
+  justify-content: center;
+}
+
+ion-icon {
+  visibility: hidden;
+  height: 30px;
+  width: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  .textoArticulo {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mb-3 {
+    flex: 1 1 100%;
+  }
+
+  .btnArticulo {
+    margin-left: 0%;
+  }
+
+  .textoArticulo {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mb-3 {
+    flex: 1 1 100%;
+  }
+
+  .btnArticulo {
+    margin-left: 0%;
+  }
+}
+
+#descripcion {
+  width: 250px !important;
+}
+
+#tablaArticulos {
+  margin-top: 15px;
+}
+
+th {
+  text-align: center;
+}
+
+table.dataTable tbody tr {
+  background-color: transparent;
+  vertical-align: middle !important;
+}
+
+/* Centra o alinea a la izquierda el buscador de DataTables */
+.dataTables_wrapper .dataTables_filter {
+  float: left;
+  text-align: right;
+}
+
+th#colDescripcion {
+  width: 90% !important;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border: none;
+  overflow-y: auto;
+}
+
+.modal-header {
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+label {
+  margin-bottom: 18px;
+}
+
+.small, small {
+  font-size: 13px;
+}
+
+#contador {
+  font-size: 18px;
+}
+
+.nota {
+  background-color: #f8f9fa;
+  color: #5f676f;
+  border-left: 4px solid #094724;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.nota p {
+  margin: 0;
+  color: #3e3939;
+}
+
+b,
+strong {
+  font-weight: bolder;
+  color: #145a32;
+}
